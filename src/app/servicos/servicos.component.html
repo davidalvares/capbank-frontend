@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <h1>Serviços</h1>
+    <mat-tab-group>
+        <mat-tab label="saldo">
+            <mat-form-field class="example-full-width">
+                <mat-label>Seu Saldo atual</mat-label>
+                <input matInput placeholder="saldo" value="R$1000" disabled="disabled">
+            </mat-form-field>
+
+        </mat-tab>
+        <mat-tab label="Depósito">
+            <mat-form-field class="example-full-width">
+                <mat-label> Depósito</mat-label>
+                <input matInput placeholder="Digite um valor para Depósito">
+            </mat-form-field>
+
+            <ol>
+                <li>
+                    <mat-form-field>
+                        <mat-label>Digite um valor para Depósito</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </li>
+                <li>
+                    <button mat-raised-button (click)="openDialog()">Depósitar</button>
+                </li>
+                <li *ngIf="valor">
+                    You chose: <i>{{valor}}</i>
+                </li>
+            </ol>
+        </mat-tab>
+        <mat-tab label="Saque"> Saque            
+            <ol>
+                <li>
+                    <mat-form-field>
+                        <mat-label>Digite um valor para Depósito</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </li>
+                <li>
+                    <button mat-raised-button (click)="openDialog()">Depósitar</button>
+                </li>
+                <li *ngIf="valor">
+                    You chose: <i>{{valor}}</i>
+                </li>
+            </ol></mat-tab>
+    </mat-tab-group>
+
+
+</div>
